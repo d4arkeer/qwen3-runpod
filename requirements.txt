@@ -1,0 +1,2 @@
+runpod
+# vllm is already installed in the base image
