@@ -8,8 +8,8 @@ RUN pip install runpod
 COPY handler.py /handler.py
 
 # --- CRITICAL FIX ---
-# Reset the entrypoint to avoid conflict with the base image's default command
+# We must reset the entrypoint so Docker doesn't force the default vLLM server command.
 ENTRYPOINT []
 
-# Set the command to run your handler
+# Run your handler
 CMD ["python3", "-u", "/handler.py"]
