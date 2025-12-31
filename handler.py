@@ -22,8 +22,7 @@ engine_args = AsyncEngineArgs(
     max_model_len=32768,         
     dtype="auto",
     disable_log_stats=False,
-    trust_remote_code=True,
-    worker_use_ray=False,
+    trust_remote_code=True
 )
 
 print(f"--- Initializing vLLM for {MODEL_NAME} ---")
